@@ -66,7 +66,7 @@ struct ContentView: View {
                 Spacer()
                 HStack{
                 Spacer()
-                //These buttons allow user selection, resets value
+                //These buttons allow user selection, resets value for each new roll
                 Button( action: {
                     userVal = 0
                     userHand = "hand2"
