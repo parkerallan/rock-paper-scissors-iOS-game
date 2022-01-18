@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "rock-paper-scissors-gc0f05e2d7_1280.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
