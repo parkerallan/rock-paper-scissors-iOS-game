@@ -12,8 +12,14 @@ struct ContentView: View {
     @State private var cpuScore = 0
     @State private var userScore = 0
     @State private var cpuHand = "hand2"
-    @State private var userHand = "hand3"
-    @State private var userVal = 0
+    @State private var userHand = "hand2"
+    @State private var userVal = 2
+    
+    func resetGame() {
+         //reset scores
+         userScore = 0
+         cpuScore = 0
+     }
     
     var body: some View {
         ZStack{
@@ -122,47 +128,43 @@ struct ContentView: View {
                 }
             }
             //win screen
-            /*if userScore == 5 {
+            if userScore == 5 {
                 VStack {
                     Spacer()
-                    Image("bunny")
+                    Image("bunny1")
                         .resizable()
                         .aspectRatio( contentMode: .fit)
                     Spacer()
                     Button(action: {
-                        //.onDelete(perform: <#T##((Foundation.IndexSet) -> Void)?#>)
+                        resetGame()
                     }) {
-                        Text("You Lost :(")
+                        Text("You Win :)")
                             .font(.largeTitle)
                             .foregroundColor(.green)
                             .padding()
                             .border(Color.green, width: 3)
+                    }
                 }
             }
             //lose screen
             if cpuScore == 5 {
                 VStack {
                     Spacer()
-                    Image("bunny")
+                    Image("bunny2")
                         .resizable()
                         .aspectRatio( contentMode: .fit)
                     Spacer()
                     Button(action: {
-                        //.onDelete(perform: <#T##((Foundation.IndexSet) -> Void)?#>)
+                        resetGame()
                     }) {
                         Text("You Lost :(")
                             .font(.largeTitle)
-                            .foregroundColor(.green)
+                            .foregroundColor(.red)
                             .padding()
-                            .border(Color.green, width: 3)
-                        }
+                            .border(Color.red, width: 3)
                     }
-                }*/
-               /* func resetGame() {
-                    //reset scores
-                    userScore = 0
-                    cpuScore = 0
-                } */
+                }
+            }
         }.background(Color.white)
     }
 }
